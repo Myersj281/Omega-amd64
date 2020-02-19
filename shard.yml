@@ -5,13 +5,15 @@ authors:
   - Joshua Myers <Myersj281@gmx.com>
 
 targets:
-  Omega:
-    main: src/Omega.cr
+  Omega-amd64:
+    main: src/boot.cr
 
 dependencies:
   LibO:
     github: Myersj281/LibO
-  Omega: Myersj281/Omega
+  Omega:
+    github: Myersj281/Omega
+
 crystal: 0.27.0
 
 license: MIT

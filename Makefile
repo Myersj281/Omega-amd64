@@ -1,9 +1,8 @@
 MAIN := Omega.elf
 ISO := Omega.iso
 
-
 @echo Locating required files...
-#$(shell find src | grep .cr) Makefile ./src/amd64.ld
+$(shell find src | grep .cr) Makefile ./src/amd64.ld
 @echo Building executable...
 @crystal build ./src/boot.cr --prelude=empty --static --cross-compile  --target "x86_64-pc-elf" --cross-compile --link-flags $(shell pwd)/src/amd64.ld -o Omega
 @gcc Omega.o -o $(MAIN)
