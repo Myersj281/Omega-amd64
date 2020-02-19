@@ -1,0 +1,17 @@
+name: Omega-amd64
+version: 0.1.0
+
+authors:
+  - Joshua Myers <Myersj281@gmx.com>
+
+targets:
+  Omega:
+    main: src/Omega.cr
+
+dependencies:
+  LibO:
+    github: Myersj281/LibO
+  Omega: Myersj281/Omega
+crystal: 0.27.0
+
+license: MIT
