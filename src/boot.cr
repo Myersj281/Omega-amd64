@@ -14,3 +14,8 @@ fun __entry()
   asm("call main")
   asm("hlt")
 end
+
+
+def main
+  Omega.init(Screen.new, Keyboard.new)
+end

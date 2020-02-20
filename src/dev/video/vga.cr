@@ -1,6 +1,5 @@
 require "LibO"
 
-
 struct Screen
   def initialize()
     @framebuffer = Pointer(UInt16).new(0xb8000u64)
@@ -34,17 +33,3 @@ struct Screen
   end
 end
 
-
-STDOUT = Screen.new
-def self.print(line : String)
-  STDOUT.print(line)
-end
-
-def self.puts(line : String)
-  print line
-  print "\n"
-end
-
-def self.clear()
-  STDOUT.clear
-end
